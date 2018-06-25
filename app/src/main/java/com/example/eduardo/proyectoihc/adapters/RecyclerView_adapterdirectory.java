@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.eduardo.proyectoihc.R;
 import com.example.eduardo.proyectoihc.objects.fundation;
@@ -47,14 +48,15 @@ public class RecyclerView_adapterdirectory extends RecyclerView.Adapter<Recycler
     }
 
 
-    public void onBindViewHolder(@NonNull RecyclerView_adapterdirectory.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull RecyclerView_adapterdirectory.ViewHolder holder, final int position) {
         holder.titulo.setText(fundations_listas.get(position).getTitle());
         holder.descipcion.setText(fundations_listas.get(position).getDescription());
         //holder.image_proyecto()
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                //Toast.makeText(view.getContext(),"Tap",Toast.LENGTH_SHORT).show();
+                goDescription(position);
             }
         });
     }
@@ -62,5 +64,9 @@ public class RecyclerView_adapterdirectory extends RecyclerView.Adapter<Recycler
 
     public int getItemCount() {
         return fundations_listas.size();
+    }
+
+    public void goDescription(int position){
+
     }
 }

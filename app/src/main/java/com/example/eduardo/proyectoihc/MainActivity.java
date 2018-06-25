@@ -1,5 +1,6 @@
 package com.example.eduardo.proyectoihc;
 
+import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,10 +9,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-
+import android.widget.Toast;
 import com.example.eduardo.proyectoihc.adapters.RecyclerView_adapterdirectory;
 import com.example.eduardo.proyectoihc.objects.fundation;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -52,18 +52,30 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+
+
+        f_butron_add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Toast.makeText(MainActivity.this,"añadir", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this,add_fundtion.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
 
     public List<fundation> obtener_fundaciones(){
         List<fundation> fundations= new ArrayList<>();
-        fundations.add(new fundation("Fundacion SA","Fundacion dedicada a ayudar a jovenes con discapacidad visual auditiva que deseen aprender a leer y escribir en braille","1.1"));
-        fundations.add(new fundation("Fundacion SA","Fundacion dedicada a ayudar a jovenes con discapacidad visual auditiva que deseen aprender a leer y escribir en braille","1.1"));
-        fundations.add(new fundation("Fundacion SA","Fundacion dedicada a ayudar a jovenes con discapacidad visual auditiva que deseen aprender a leer y escribir en braille","1.1"));
-        fundations.add(new fundation("Fundacion SA","Fundacion dedicada a ayudar a jovenes con discapacidad visual auditiva que deseen aprender a leer y escribir en braille","1.1"));
-        fundations.add(new fundation("Fundacion SA","Fundacion dedicada a ayudar a jovenes con discapacidad visual auditiva que deseen aprender a leer y escribir en braille","1.1"));
-        fundations.add(new fundation("Fundacion SA","Fundacion dedicada a ayudar a jovenes con discapacidad visual auditiva que deseen aprender a leer y escribir en braille","1.1"));
-        fundations.add(new fundation("Fundacion SA","Fundacion dedicada a ayudar a jovenes con discapacidad visual auditiva que deseen aprender a leer y escribir en braille","1.1"));
+        fundations.add(new fundation("Fundacion SA1","Fundacion dedicada a ayudar a jovenes con discapacidad visual auditiva que deseen aprender a leer y escribir en braille","1.1"));
+        fundations.add(new fundation("Fundacion SA2","Fundacion dedicada a ayudar a jovenes con discapacidad visual auditiva que deseen aprender a leer y escribir en braille","1.1"));
+        fundations.add(new fundation("Fundacion SA3","Fundacion dedicada a ayudar a jovenes con discapacidad visual auditiva que deseen aprender a leer y escribir en braille","1.1"));
+        fundations.add(new fundation("Fundacion SA4","Fundacion dedicada a ayudar a jovenes con discapacidad visual auditiva que deseen aprender a leer y escribir en braille","1.1"));
+        fundations.add(new fundation("Fundacion SA5","Fundacion dedicada a ayudar a jovenes con discapacidad visual auditiva que deseen aprender a leer y escribir en braille","1.1"));
+        fundations.add(new fundation("Fundacion SA6","Fundacion dedicada a ayudar a jovenes con discapacidad visual auditiva que deseen aprender a leer y escribir en braille","1.1"));
+        fundations.add(new fundation("Fundacion SA7","Fundacion dedicada a ayudar a jovenes con discapacidad visual auditiva que deseen aprender a leer y escribir en braille","1.1"));
 
         return fundations;
     }
