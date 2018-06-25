@@ -1,6 +1,7 @@
 package com.example.eduardo.proyectoihc.adapters;
 
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -11,7 +12,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.eduardo.proyectoihc.MainActivity;
 import com.example.eduardo.proyectoihc.R;
+import com.example.eduardo.proyectoihc.details_fundation;
 import com.example.eduardo.proyectoihc.objects.fundation;
 
 import java.util.List;
@@ -51,12 +54,11 @@ public class RecyclerView_adapterdirectory extends RecyclerView.Adapter<Recycler
     public void onBindViewHolder(@NonNull RecyclerView_adapterdirectory.ViewHolder holder, final int position) {
         holder.titulo.setText(fundations_listas.get(position).getTitle());
         holder.descipcion.setText(fundations_listas.get(position).getDescription());
-        //holder.image_proyecto()
         holder.cardView.setOnClickListener(new View.OnClickListener() {
-            @Override
             public void onClick(View view) {
-                //Toast.makeText(view.getContext(),"Tap",Toast.LENGTH_SHORT).show();
-                goDescription(position);
+                //Toast.makeText(view.getContext(),"tap",Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(view.getContext(),details_fundation.class);
+                view.getContext().startActivity(intent);
             }
         });
     }
@@ -64,9 +66,5 @@ public class RecyclerView_adapterdirectory extends RecyclerView.Adapter<Recycler
 
     public int getItemCount() {
         return fundations_listas.size();
-    }
-
-    public void goDescription(int position){
-
     }
 }
