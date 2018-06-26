@@ -9,7 +9,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Toast;
 import com.example.eduardo.proyectoihc.adapters.RecyclerView_adapterdirectory;
 import com.example.eduardo.proyectoihc.objects.fundation;
 import java.util.ArrayList;
@@ -68,13 +67,13 @@ public class MainActivity extends AppCompatActivity {
 
     public List<fundation> obtener_fundaciones(){
         List<fundation> fundations= new ArrayList<>();
-        fundations.add(new fundation("Fundacion SA1","Fundacion dedicada a ayudar a jovenes con discapacidad visual auditiva que deseen aprender a leer y escribir en braille","1.1"));
-        fundations.add(new fundation("Fundacion SA2","Fundacion dedicada a ayudar a jovenes con discapacidad visual auditiva que deseen aprender a leer y escribir en braille","1.1"));
-        fundations.add(new fundation("Fundacion SA3","Fundacion dedicada a ayudar a jovenes con discapacidad visual auditiva que deseen aprender a leer y escribir en braille","1.1"));
-        fundations.add(new fundation("Fundacion SA4","Fundacion dedicada a ayudar a jovenes con discapacidad visual auditiva que deseen aprender a leer y escribir en braille","1.1"));
-        fundations.add(new fundation("Fundacon SA5","Fundacion dedicada a ayudar a jovenes con discapacidad visual auditiva que deseen aprender a leer y escribir en braille","1.1"));
-        fundations.add(new fundation("Fundacion SA6","Fundacion dedicada a ayudar a jovenes con discapacidad visual auditiva que deseen aprender a leer y escribir en braille","1.1"));
-        fundations.add(new fundation("Fundacion SA7","Fundacion dedicada a ayudar a jovenes con discapacidad visual auditiva que deseen aprender a leer y escribir en braille","1.1"));
+        fundations.add(new fundation("Fundacion SA1","Fundacion dedicada a ayudar a jovenes con discapacidad visual auditiva que deseen aprender a leer y escribir en braille","1.1","01 222 229 5500 Ext 7390","Solo Mujeres","Av. San Claudio y 14 Sur 72592 Puebla de Zaragoza"));
+        fundations.add(new fundation("Fundacion SA2","Fundacion dedicada a ayudar a jovenes con discapacidad visual auditiva que deseen aprender a leer y escribir en braille","1.1","01 222 229 5500 Ext 7390","Solo Mujeres","Av. San Claudio y 14 Sur 72592 Puebla de Zaragoza"));
+        fundations.add(new fundation("Fundacion SA3","Fundacion dedicada a ayudar a jovenes con discapacidad visual auditiva que deseen aprender a leer y escribir en braille","1.1","01 222 229 5500 Ext 7390","Solo Mujeres","Av. San Claudio y 14 Sur 72592 Puebla de Zaragoza"));
+        fundations.add(new fundation("Fundacion SA4","Fundacion dedicada a ayudar a jovenes con discapacidad visual auditiva que deseen aprender a leer y escribir en braille","1.1","01 222 229 5500 Ext 7390","Solo Mujeres","Av. San Claudio y 14 Sur 72592 Puebla de Zaragoza"));
+        fundations.add(new fundation("Fundacion SA5","Fundacion dedicada a ayudar a jovenes con discapacidad visual auditiva que deseen aprender a leer y escribir en braille","1.1","01 222 229 5500 Ext 7390","Solo Mujeres","Av. San Claudio y 14 Sur 72592 Puebla de Zaragoza"));
+        fundations.add(new fundation("Fundacion SA6","Fundacion dedicada a ayudar a jovenes con discapacidad visual auditiva que deseen aprender a leer y escribir en braille","1.1","01 222 229 5500 Ext 7390","Solo Mujeres","Av. San Claudio y 14 Sur 72592 Puebla de Zaragoza"));
+        fundations.add(new fundation("Fundacion SA7","Fundacion dedicada a ayudar a jovenes con discapacidad visual auditiva que deseen aprender a leer y escribir en braille","1.1","01 222 229 5500 Ext 7390","Solo Mujeres","Av. San Claudio y 14 Sur 72592 Puebla de Zaragoza"));
         return fundations;
     }
 }

@@ -83,7 +83,7 @@
                 android:id="@+id/edit_discapacidad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Tipo de Discapacidad que atiende"
+                android:hint="Personas a las que admite"
                 android:textAlignment="gravity"
                 android:textColorHint="#000000"
                 />

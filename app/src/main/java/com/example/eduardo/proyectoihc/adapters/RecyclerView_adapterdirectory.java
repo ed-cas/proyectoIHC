@@ -2,6 +2,7 @@ package com.example.eduardo.proyectoihc.adapters;
 
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -21,6 +22,7 @@ import java.util.List;
 
 public class RecyclerView_adapterdirectory extends RecyclerView.Adapter<RecyclerView_adapterdirectory.ViewHolder>{
 
+    public List<fundation> fundations_listas;
 
     public static class  ViewHolder extends RecyclerView.ViewHolder{
         private TextView titulo, descipcion;
@@ -35,8 +37,6 @@ public class RecyclerView_adapterdirectory extends RecyclerView.Adapter<Recycler
             cardView=(CardView)view.findViewById(R.id.card_view_fundation_id);
         }
     }
-
-    public List<fundation> fundations_listas;
 
 
     public RecyclerView_adapterdirectory(List<fundation> fundations_listas){
@@ -56,8 +56,11 @@ public class RecyclerView_adapterdirectory extends RecyclerView.Adapter<Recycler
         holder.descipcion.setText(fundations_listas.get(position).getDescription());
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                //Toast.makeText(view.getContext(),"tap",Toast.LENGTH_SHORT).show();
+                //Toast.makeText(view.getContext(),fundations_listas.get(position).getTitle(),Toast.LENGTH_SHORT).show();
+                Bundle b=new Bundle();
+                b.putSerializable("object",fundations_listas.get(position));
                 Intent intent = new Intent(view.getContext(),details_fundation.class);
+                intent.putExtras(b);
                 view.getContext().startActivity(intent);
             }
         });
