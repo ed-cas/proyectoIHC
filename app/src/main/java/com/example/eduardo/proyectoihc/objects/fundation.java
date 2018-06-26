@@ -13,7 +13,7 @@ public class fundation implements Serializable {
     private String direction;
 
 
-    public fundation(String title, String description, String ubicacion, String telephone, String type, String direction){
+    public fundation(String title, String direction, String description,String telephone, String type){
         this.title=title;
         this.description=description;
         this.ubicacion=ubicacion;
