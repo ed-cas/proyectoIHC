@@ -1,8 +1,10 @@
 package com.example.eduardo.proyectoihc;
 
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -30,6 +32,15 @@ public class add_fundtion extends AppCompatActivity {
         image_preview = (ImageView)findViewById(R.id.image_preview);
         btn1 = (Button)findViewById(R.id.btn1);
         getSupportActionBar().hide();
+
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                add();
+                Intent intent = new Intent(add_fundtion.this,MainActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     public void add(){

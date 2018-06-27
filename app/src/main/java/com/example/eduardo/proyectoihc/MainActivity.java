@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     base sqlh;
     SQLiteDatabase db;
     String nomb="",dir="",tel="",desc="",tipo="";
+    List<fundation> fundations= new ArrayList<>();
 
     private RecyclerView recyclerView_fundations;
     private RecyclerView_adapterdirectory adapter_fundation;
@@ -94,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public List<fundation> obtener_fundaciones(String nomb, String dir, String tel, String desc, String tipo){
-        List<fundation> fundations= new ArrayList<>();
+
         fundations.add(new fundation(nomb,dir,tel,desc,tipo));
         return fundations;
     }
